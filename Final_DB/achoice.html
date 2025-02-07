@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Action</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1rem 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+        }
+
+        .choice-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-top: 0;
+            background: url('254361.png') center/cover no-repeat;
+            min-height: 100vh;
+            color: white;
+            position: relative;
+            padding: 20px;
+        }
+
+        .choice-container h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            margin: 0 10px; 
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .footer-content {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            width: 100%;
+        }
+
+        .logout-button {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background-color: transparent;
+            color: white;
+            padding: 10px 20px;
+            border: 2px solid #fff; 
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 50%;
+            transition: background-color 0.3s ease;
+            outline: none;
+        }
+
+        .logout-button:hover {
+            background-color: #45a049;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: inline-block;  
+            margin-bottom: 8px;
+            width: 30%; 
+        }
+
+        input {
+            width: 68%;  
+            padding: 10px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button[type="submit"] {
+            background-color: #4caf50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">FAST Airlines</div>
+        </nav>
+    </header>
+
+    <div class="choice-container">
+        <button class="logout-button" onclick="performAction('logout')">Logout</button>
+
+        <h2>Choose Action</h2>
+        <div class="button-container">
+            <button onclick="performAction('add')">Add Plane</button>
+            <button onclick="performAction('remove')">Remove Plane</button>
+            <button onclick="performAction('update')">Update Plane</button>
+            <button onclick="performAction('view')">View Planes</button>
+            <button onclick="performAction('craft')">Add Aircraft</button>
+            <button onclick="performAction('status')">Update Status</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2023 FAST Airlines. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function performAction(action) {
+            switch (action) {
+                case 'add':
+                    window.location.href = "add.php";
+                    break;
+                case 'remove':
+                    window.location.href = "remove.php";
+                    break;
+                case 'update':
+                    window.location.href = "update.php";
+                    break;
+                case 'view':
+                    window.location.href = "view.php";
+                    break;
+                case 'craft':
+                    window.location.href = "craft.php";
+                    break;
+                case 'logout':
+                    window.location.href = "admin.html";
+                    break;
+                case 'status':
+                    window.location.href = "status.php";
+                    break;
+                default:
+                    break;
+            }
+        }
+    </script>
+</body>
+
+</html>

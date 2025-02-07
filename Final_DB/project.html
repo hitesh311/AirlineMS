@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAST Airlines</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1rem 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+        }
+
+        ul {
+            list-style: none;
+            display: flex;
+        }
+
+        li {
+            margin: 0 1rem;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-top: 0;
+            background: url('254361.png') center/cover no-repeat;
+            min-height: 100vh;
+            color: white;
+            position: relative;
+        }
+
+        .menu-links {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+
+        .menu-links .box-input {
+            margin: 0 17px;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-size: 20px;
+            color: #333;
+            border: 4px solid #333;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .menu-links .box-input:hover {
+            background-color: #333;
+            color: white;
+        }
+
+        .footer-content {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">FAST Airlines</div>
+            <ul>
+                <li><a href="project.html">Home</a></li>
+                <li><a href="login.php">Login / Sign-up</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="admin.html">Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="hero-content">
+        <div class="menu-links">
+            <a href="flight.php" class="box-input" id="flightTab">Flight</a>
+            <a href="webcheckin.php" class="box-input" id="webCheckinTab">Web Check-in</a>
+            <a href="MyBooking.php" class="box-input" id="myBookingTab">My Booking</a>
+            <a href="flightstatus.php" class="box-input" id="flightStatusTab">Flight Status</a>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2023 FAST Airlines. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
